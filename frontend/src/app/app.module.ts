@@ -7,6 +7,18 @@ import { HeaderComponent } from './header/header.component';
 import { PackageReceiverDataComponent } from './package-receiver-data/package-receiver-data.component';
 import { SupplyMethodComponent } from './supply-method/supply-method.component';
 import { PaymentMethodComponent } from './payment-method/payment-method.component';
+import { OrderScreenComponent } from './order-screen/order-screen.component';
+import {RouterModule, Routes} from '@angular/router';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
+const appRoutes: Routes = [
+  { path: 'product',      component: OrderScreenComponent },
+  { path: '',
+    redirectTo: '/heroes',
+    pathMatch: 'full'
+  },
+  { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [
@@ -16,11 +28,18 @@ import { PaymentMethodComponent } from './payment-method/payment-method.componen
     PackageReceiverDataComponent,
     SupplyMethodComponent,
     PaymentMethodComponent,
+    OrderScreenComponent,
+    PageNotFoundComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(
+      appRoutes,
+      {enableTracing : true}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
