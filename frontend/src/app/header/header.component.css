@@ -1,0 +1,11 @@
+.header {
+  background: #fff;
+}
+
+.headerImage {
+  alignment: left;
+}
+
+.accountIcon {
+  alignment: right
+}

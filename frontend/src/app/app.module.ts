@@ -15,7 +15,7 @@ import { PaymentMethodComponent } from './payment-method/payment-method.componen
     HeaderComponent,
     PackageReceiverDataComponent,
     SupplyMethodComponent,
-    PaymentMethodComponent
+    PaymentMethodComponent,
   ],
   imports: [
     BrowserModule
