@@ -1,5 +1,6 @@
 package com.paaste.coopy.backend.Maps;
 
+import com.paaste.coopy.backend.Pickups.Coordinate;
 import com.paaste.coopy.backend.Pickups.PickupPoint;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,14 +18,18 @@ public class GoogleMapsClient implements Maps
                 "," + origin.getLongitude() + "&destinations=" + destination.getLatitude() +
                 "," + destination.getLongitude() + "&key=AIzaSyCJkiekbMK0DsVdFsrSEts_WlgvxCfPThA";
 
-        DistanceMatrix distanceMatrix = restTemplate.getForObject(uri, DistanceMatrix.class);
-        return distanceMatrix;
+        return restTemplate.getForObject(uri, DistanceMatrix.class);
     }
 
     @Override
     public List<PickupPoint> getTwoNearestPickupPoints(GeoCoords origin, List<PickupPoint> pickups)
     {
-        List<PickupPoint> result = pickups.stream()
+        Coordinate coordinate = new Coordinate();
+        coordinate.latitude = origin.getLatitude();
+        coordinate.longitude = origin.getLongitude();
+
+        return pickups.stream()
+                .filter(pickupPoint -> !pickupPoint.coordinates.equals(coordinate))
                 .map(pickupPoint -> {
                     PickupData pickupData = new PickupData();
                     pickupData.distance = getDistance(getDistanceMatrix(origin, new GeoCoords(pickupPoint.coordinates)));
@@ -37,7 +42,6 @@ public class GoogleMapsClient implements Maps
                 .map(pickupData -> pickupData.pickupPoint)
                 .limit(2)
                 .collect(Collectors.toList());
-        return result;
     }
 
     private int getDistance(DistanceMatrix distanceMatrix)

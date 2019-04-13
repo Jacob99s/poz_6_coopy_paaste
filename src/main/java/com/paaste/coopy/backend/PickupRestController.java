@@ -28,4 +28,11 @@ public class PickupRestController {
                                                                         @RequestParam int sellerID) {
         return ResponseEntity.ok(pickupPlaces.getAllPickups(userId, sellerID));
     }
+
+    @GetMapping("/area")
+    public ResponseEntity<List<PickupPoint>> getPickupsInArea(@RequestParam(name = "lat") double latitude,
+                                                              @RequestParam(name = "lon") double longitude,
+                                                              @RequestParam(name = "sellerID") int sellerID) {
+        return ResponseEntity.ok(pickupPlaces.getPlacesInArea(latitude,longitude, sellerID));
+    }
 }

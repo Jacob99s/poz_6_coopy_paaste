@@ -17,7 +17,7 @@ public class UserRepositoryInitializer implements ApplicationListener<ContextRef
         UserRepository userRepository = (UserRepository) event.getApplicationContext().getBean("MockUserRepository");
 
         SecureRandom secureRandom = new SecureRandom();
-        double latitude = 56;
+        double latitude = 52;
         double longitude = 16;
 
         for(int i =0 ; i < 10 ; i++) {

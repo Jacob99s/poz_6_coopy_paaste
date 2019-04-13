@@ -78,4 +78,8 @@ public class PickupPlaces {
         double seconds = meters / 24.00;
         return (seconds / 3600);
     }
+
+    public List<PickupPoint> getPlacesInArea(double latitude, double longitude, int sellerID) {
+        return findPickupPoints(new GeoCoords(latitude, longitude), sellerID).getPoints();
+    }
 }
