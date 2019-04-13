@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c75958d-d802-4e07-aa85-0415a0e18599" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/PickupRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/configuration/RestTemplateConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/PickupPointService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/Coordinate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/PickupPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/PickupPoints.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-04-13T044859.200.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-13T044859.200.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/PickupPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/PickupPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/Points.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/Points.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/TestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/setPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/setPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/BackendApplication.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,55 +70,83 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/TestController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#592#593#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/Points.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="97">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/PickupPoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/setPoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/BackendApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="104">
+              <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/PickupPointService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/PickupRestController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#734#735#0" expanded="true" />
+                <element signature="e#784#785#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/PickupPoints.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#277#278#0" expanded="true" />
+                <element signature="e#332#333#0" expanded="true" />
+                <element signature="e#368#369#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/PickupPoint.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="117">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/Coordinate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/configuration/RestTemplateConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,6 +167,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="dummy://restClient/response25.json" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -145,6 +183,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/setPoint.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/Points.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/TestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/PickupPoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/configuration/RestTemplateConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/BackendApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/PickupPoints.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/PickupPointService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/PickupRestController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/Coordinate.java" />
       </list>
     </option>
   </component>
@@ -162,12 +207,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="poz_6_coopy_paaste" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poz_6_coopy_paaste" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="backend" type="b2602c69:ProjectViewProjectNode" />
@@ -195,17 +247,592 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poz_6_coopy_paaste" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="poz_6_coopy_paaste" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowBean Validation.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555123721068" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/pickups" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/vnd.allegro.public.v3+json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="100000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="1000000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://edge.allegro.pl.allegrosandbox.pl" />
+          <option name="urlPath" value="/general-deliveries" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/vnd.allegro.public.v3+json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="100000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="payments" />
+                <option name="value" value="PREPAID" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="1000000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="1000000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/pickups" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/vnd.allegro.public.v3+json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="100000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="payments" />
+                <option name="value" value="PREPAID" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="1000000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://edge.allegro.pl.allegrosandbox.pl" />
+          <option name="urlPath" value="/general-deliveries" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/vnd.allegro.public.v3+json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="100000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="payments" />
+                <option name="value" value="PREPAID" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="1000000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/pickups" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/vnd.allegro.public.v3+json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="100000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="payments" />
+                <option name="value" value="PREPAID" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://edge.allegro.pl.allegrosandbox.pl" />
+          <option name="urlPath" value="/general-deliveries" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/vnd.allegro.public.v3+json" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="100000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="payments" />
+                <option name="value" value="PREPAID" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="https://edge.allegro.pl.allegrosandbox.pl" />
+          <option name="urlPath" value="/general-deliveries" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="clusterThreshold" />
+                <option name="value" value="100000" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="deliveryMethods" />
+                <option name="value" value="2488f7b7-5d1c-4d65-b85c-4cbcf253fd93" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLat" />
+                <option name="value" value="52.398100009724445" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="nwLon" />
+                <option name="value" value="16.848863200988717" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="payments" />
+                <option name="value" value="PREPAID" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLat" />
+                <option name="value" value="52.38497901513091" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="seLon" />
+                <option name="value" value="16.867316799011178" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="sellerId" />
+                <option name="value" value="43544065" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080" />
+          <option name="urlPath" value="/pickups" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -219,10 +846,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BackendApplication">
     <configuration name="BackendApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.paaste.coopy.backend.BackendApplication" />
-      <module name="backend_main" />
+      <module name="com.paaste.coopy.backend.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.paaste.coopy.backend.*" />
@@ -280,6 +908,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="com.paaste.coopy.backend.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.paaste.coopy.backend.BackendApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.BackendApplication" />
@@ -291,19 +926,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ab9b816f-6ad9-4fa0-9ad9-dbd47a1b7418" name="Default Changelist" comment="" />
+      <changelist id="3c75958d-d802-4e07-aa85-0415a0e18599" name="Default Changelist" comment="" />
       <created>1555092042154</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555092042154</updated>
+      <workItem from="1555121310257" duration="2301000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3903000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -311,19 +950,28 @@
       <window_info id="Designer" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="REST Client" weight="0.49918166" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Tail" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32850242" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31587562" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32850242" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" visible="true" weight="0.32569557" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.32733223" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.32850242" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Gradle" order="4" weight="0.32980332" />
@@ -331,7 +979,32 @@
       <window_info anchor="right" id="Palette" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.32980332" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/frontend/node_modules/karma/config.tpl.js" />
+      </list>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/PickupPointService.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -341,13 +1014,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/jdk.javadoc/jdk/javadoc/internal/tool/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-12/lib/src.zip!/jdk.javadoc/jdk/javadoc/internal/tool/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/CallApi.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/RestClient.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/UserData.java">
@@ -357,47 +1024,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/OnePoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/PickupPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/BackendApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/setPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/Points.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/OnePoint.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -407,6 +1034,100 @@
             <element signature="e#554#555#0" expanded="true" />
             <element signature="e#592#593#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/PickupPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/setPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/Points.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/BackendApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/configuration/RestTemplateConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/PickupPointService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="13" column="44" lean-forward="true" selection-start-line="13" selection-start-column="44" selection-end-line="13" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/PickupRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/PickupPoints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#332#333#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/PickupPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paaste/coopy/backend/domain/model/Coordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>

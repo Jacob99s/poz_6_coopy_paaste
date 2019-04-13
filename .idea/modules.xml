@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Allegro.iml" filepath="$PROJECT_DIR$/Allegro.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/backend.iml" filepath="$PROJECT_DIR$/.idea/modules/backend.iml" group="backend" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/backend_main.iml" filepath="$PROJECT_DIR$/.idea/modules/backend_main.iml" group="backend" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/backend_test.iml" filepath="$PROJECT_DIR$/.idea/modules/backend_test.iml" group="backend" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.paaste.coopy.backend.iml" filepath="$PROJECT_DIR$/.idea/modules/com.paaste.coopy.backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.paaste.coopy.backend.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.paaste.coopy.backend.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.paaste.coopy.backend.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.paaste.coopy.backend.test.iml" />
     </modules>
   </component>
 </project>
