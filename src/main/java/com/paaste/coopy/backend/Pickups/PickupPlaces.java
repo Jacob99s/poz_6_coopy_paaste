@@ -1,6 +1,5 @@
 package com.paaste.coopy.backend.Pickups;
 
-import com.paaste.coopy.backend.Exceptions.OutOfRangeException;
 import com.paaste.coopy.backend.GoogleMaps.GeoCoords;
 import com.paaste.coopy.backend.GoogleMaps.GoogleMaps;
 import com.paaste.coopy.backend.GoogleMaps.GoogleMapsClient;

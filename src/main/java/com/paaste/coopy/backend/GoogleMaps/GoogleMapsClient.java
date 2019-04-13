@@ -25,10 +25,16 @@ public class GoogleMapsClient implements GoogleMaps
     public List<PickupPoint> getTwoNearestPickupPoints(GeoCoords origin, List<PickupPoint> pickups)
     {
         List<PickupPoint> result = pickups.stream()
-                .filter(pickupPoint -> getDistance(getDistanceMatrix(origin,
-                new GeoCoords(pickupPoint.coordinates))) < 3000)
-                .sorted(Comparator.comparingInt(pickup -> getDistance(getDistanceMatrix(origin,
-                        new GeoCoords(pickup.coordinates)))))
+                .map(pickupPoint -> {
+                    PickupData pickupData = new PickupData();
+                    pickupData.distance = getDistance(getDistanceMatrix(origin, new GeoCoords(pickupPoint.coordinates)));
+                    pickupData.origin = origin;
+                    pickupData.pickupPoint = pickupPoint;
+                    return pickupData;
+                })
+                .filter(pickupPoint -> pickupPoint.distance < 3000)
+                .sorted(Comparator.comparingInt(o -> o.distance))
+                .map(pickupData -> pickupData.pickupPoint)
                 .limit(2)
                 .collect(Collectors.toList());
         return result;
@@ -45,4 +51,9 @@ public class GoogleMapsClient implements GoogleMaps
 
     private RestTemplate restTemplate = new RestTemplate();
 
+    private class PickupData {
+        public GeoCoords origin;
+        public PickupPoint pickupPoint;
+        int distance;
+    }
 }
