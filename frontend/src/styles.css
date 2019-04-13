@@ -25,3 +25,9 @@ body{
     color: #666;
     font-size: .9em;
 }
+.toggleView{
+    display: none;
+}
+.visible{
+    display: block;
+}

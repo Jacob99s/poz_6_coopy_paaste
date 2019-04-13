@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkbox.component.css']
 })
 export class CheckboxComponent implements OnInit {
-
+  text: String = "Przykładowy"
   constructor() { }
 
   ngOnInit() {

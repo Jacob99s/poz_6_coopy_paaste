@@ -5,8 +5,7 @@
   <meta charset="utf-8">
   <title>Frontend</title>
   <base href="/">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfpaHPZm3nZyQZHJbslbvgaQqWCguVsJU&callback=initMap">
-  </script>
+  <script src="https://d27mwlzsifzn8y.cloudfront.net/scripts/jquery-rattep.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -14,5 +13,90 @@
 <body>
   <app-root></app-root>
 </body>
+<script>
+  var userPosition = {};
+  var map = null;
+  function initMap() {
+    console.log(document.getElementById('map'));
+    map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 6,
+      center: { lat: 52.0693, lng: 19.4803 },
+      mapTypeControl: true,
+      streetViewControl: false,
+      fullscreenControl: false
+    });
+  }
+
+  function addMarker(lat, lng) {
+    marker = new google.maps.Marker({
+      position: { lat: lat, lng: lng },
+      title: "Pozycja",
+      map: map,
+      animation: "BOUNCE",
+      draggable: false
+    });
+  }
+
+  function getUserPositions(callback) {
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      userPosition = {
+        lat: Math.round(pos.coords.latitude * 10000) / 10000,
+        lng: Math.round(pos.coords.longitude * 10000) / 10000
+      };
+      callback();
+    }, function () {
+      alert('Nie udało się określić Twojej lokalizacji, prosimy o kliknięcie na mapie w celu wybrania konkretnego miejsca.');
+    });
+  }
+
+  function getPositions() {
+
+    addMarker(userPosition.lat, userPosition.lng);
+    return 0;
+    $.ajax({
+      type: "get",
+      url: "./",
+      data: {
+        position: JSON.stringify(userPosition)
+      },
+      dataType: 'jsonp',
+      beforeSend: () => { },
+      success: data => {
+        console.warn(data);
+
+
+      }, complete: () => { },
+      error: (e) => {
+        alert("HOLD THE DOOR!");
+      }
+    });
+  }
+
+  getUserPositions(getPositions);
+
+  function toggleMap() {
+    console.log("Hej, jestem");
+    var chwyt = $('#toggleMapView');
+    if (chwyt.attr('data-value') == 'false') {
+      chwyt.attr('data-value', 'true');
+      chwyt.addClass('visible');
+    } else {
+      chwyt.attr('data-value', 'false');
+      chwyt.removeClass('visible');
+    }
+  }
+  // Clicki itp
+  $('#toggleMap').delegate('label', 'click', function () {
+    $(this).parent().find('input').click();
+    toggleMap();
+  });
+  $('.mapToggleButton').click(function (e) {
+    e.preventDefault();
+    toggleMap();
+  });
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCfpaHPZm3nZyQZHJbslbvgaQqWCguVsJU&callback=initMap">
+</script>
 
 </html>
