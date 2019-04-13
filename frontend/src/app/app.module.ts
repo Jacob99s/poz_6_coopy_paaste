@@ -10,6 +10,8 @@ import { PaymentMethodComponent } from './payment-method/payment-method.componen
 import { OrderScreenComponent } from './order-screen/order-screen.component';
 import {RouterModule, Routes} from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ButtonComponent } from './button/button.component';
+import { ByuingProgressComponent } from './byuing-progress/byuing-progress.component';
 
 const appRoutes: Routes = [
   { path: 'product',      component: OrderScreenComponent },
@@ -30,6 +32,8 @@ const appRoutes: Routes = [
     PaymentMethodComponent,
     OrderScreenComponent,
     PageNotFoundComponent,
+    ButtonComponent,
+    ByuingProgressComponent,
   ],
   imports: [
     BrowserModule,

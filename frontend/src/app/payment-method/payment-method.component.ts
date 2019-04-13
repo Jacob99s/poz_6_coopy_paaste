@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Payment} from './payment';
 
 @Component({
   selector: 'app-payment-method',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaymentMethodComponent implements OnInit {
 
-  constructor() { }
+  payment: Payment = {
+    price: 10,
+    prepayPrice: 20
+  };
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
