@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OrderScreenComponent } from './order-screen.component';
+import { CheckboxComponent } from './checkbox.component';
 
-describe('OrderScreenComponent', () => {
-  let component: OrderScreenComponent;
-  let fixture: ComponentFixture<OrderScreenComponent>;
+describe('CheckboxComponent', () => {
+  let component: CheckboxComponent;
+  let fixture: ComponentFixture<CheckboxComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [OrderScreenComponent]
+      declarations: [CheckboxComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OrderScreenComponent);
+    fixture = TestBed.createComponent(CheckboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -23,5 +23,3 @@ describe('OrderScreenComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-

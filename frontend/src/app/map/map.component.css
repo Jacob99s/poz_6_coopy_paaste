@@ -1,0 +1,20 @@
+.mapCont{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #FFF;
+}
+.mapInput{
+    margin: 10px;
+    width: 95%;
+}
+
+.mapInputTitle{
+    padding: 5px 10px 0 10px;
+    margin: 0;
+}
+.mainMap{
+    width: 100%;
+    height: 70vh;
+}

@@ -1,5 +1,5 @@
 .footerImage {
-  alignment: right;
+  /* alignment: right; */
 }
 
 .footerDescription {
@@ -7,8 +7,8 @@
 }
 .footer {
   background: #222;
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
   width: 100%;
 }

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OrderScreenComponent } from './order-screen.component';
+import { MapComponent } from './map.component';
 
-describe('OrderScreenComponent', () => {
-  let component: OrderScreenComponent;
-  let fixture: ComponentFixture<OrderScreenComponent>;
+describe('MapComponent', () => {
+  let component: MapComponent;
+  let fixture: ComponentFixture<MapComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [OrderScreenComponent]
+      declarations: [MapComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OrderScreenComponent);
+    fixture = TestBed.createComponent(MapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -25,3 +25,5 @@ describe('OrderScreenComponent', () => {
 });
 
 
+
+// initMap();

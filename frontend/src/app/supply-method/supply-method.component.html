@@ -1,3 +1,74 @@
-<p>
-  supply-method works!
-</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+<div class="box">
+  <h2>
+    Dane odbiorcy przesyłki
+  </h2>
+
+  <span>
+    Na ten adres zostanie wysłana Twoja przesyłka
+  </span>
+
+  <div>
+    <div class="box textbox">
+      Jacek Kowalski<br>
+      Świętego Wincentego 23/4<br>
+      62-510 Wrocław<br>
+      +48 694 687 245
+    </div>
+  </div>
+</div>
+
+<div class="supplyContainer box">
+  <h2>
+    Oferty i sposb dostawy
+  </h2>
+  <span>sprzedajcy
+    <span class="link1">Hold_The_Door</span>
+  </span>
+
+  <div class="item">
+    <div class="item-picture">
+      <img src="https://a.allegroimg.allegrosandbox.pl/s192/03521d/2b23eddc4125bf6794532bdd2e2f" />
+    </div>
+    <div class="item-title">
+      razer blade 15
+    </div>
+  </div>
+
+  <div class="priceCont df">
+    <div class="info">
+      1 sztuka
+    </div>
+    <div class="price">
+      999,99zł
+    </div>
+  </div>
+
+  <div class="info2">
+    Odbiór w punkcie
+  </div>
+
+  <div class="chceckboxCont">
+    <app-checkbox></app-checkbox>
+    <app-checkbox></app-checkbox>
+  </div>
+
+  <div>
+    <textarea class="textarea" placeholder="Ważne informacje dla sprzedającego"></textarea>
+  </div>
+</div>
+
+<div class="box">
+  <div class="sumCont">
+    <span class="upp">Do zapłaty</span>
+    <span class="price">
+      999,99zł
+    </span>
+    <div>
+      w tym płatne z góry 0,00 zł
+    </div>
+  </div>
+  <button (click)='onClickMe()' class="upp mainButton">Przejdź do podsumowania</button>
+  <button class="upp secondButton link1">Przejdź do podsumowania</button>
+</div>

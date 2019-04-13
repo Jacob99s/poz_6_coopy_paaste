@@ -8,9 +8,9 @@ describe('SupplyMethodComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SupplyMethodComponent ]
+      declarations: [SupplyMethodComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -23,3 +23,15 @@ describe('SupplyMethodComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+@Component({
+  selector: 'app-supply-method',
+  templateUrl: `supply-method.component.html`
+})
+
+export class supplyMethodComponent {
+
+  public onClickMe() {
+    console.log('Hej, I just meet Ju');
+  }
+}
