@@ -1,6 +1,5 @@
-package com.paaste.coopy.backend.domain;
+package com.paaste.coopy.backend.Pickups;
 
-import com.paaste.coopy.backend.domain.model.PickupPoints;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;

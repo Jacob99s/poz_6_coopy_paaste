@@ -1,11 +1,8 @@
 package com.paaste.coopy.backend.Pickups;
 
-import com.paaste.coopy.backend.GoogleMaps.GeoCoords;
-import com.paaste.coopy.backend.GoogleMaps.GoogleMaps;
-import com.paaste.coopy.backend.GoogleMaps.GoogleMapsClient;
-import com.paaste.coopy.backend.domain.PickupPointService;
-import com.paaste.coopy.backend.domain.model.PickupPoint;
-import com.paaste.coopy.backend.domain.model.PickupPoints;
+import com.paaste.coopy.backend.Maps.GeoCoords;
+import com.paaste.coopy.backend.Maps.GoogleMapsClient;
+import com.paaste.coopy.backend.Maps.Maps;
 import com.paaste.coopy.backend.infrastructure.UserRepository;
 import com.paaste.coopy.backend.user.Location;
 import com.paaste.coopy.backend.user.User;
@@ -13,7 +10,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -21,7 +17,7 @@ public class PickupPlaces {
 
     private final PickupPointService pickupPointService;
 
-    private GoogleMaps maps = new GoogleMapsClient();
+    private Maps maps = new GoogleMapsClient();
 
     @Qualifier("MockUserRepository")
     private final UserRepository userRepository;
@@ -73,12 +69,8 @@ public class PickupPlaces {
         double seLon = origin.getLongitude() + toDegrees(3000.00);
         List<GeoCoords> coords = new ArrayList<>();
 
-        GeoCoords leftUpper, rightLower;
-        leftUpper = new GeoCoords(nwLat, nwLon);
-        rightLower = new GeoCoords(seLat, seLon);
-
-        coords.add(leftUpper);
-        coords.add(rightLower);
+        coords.add(new GeoCoords(nwLat, nwLon));
+        coords.add(new GeoCoords(seLat, seLon));
         return coords;
     }
 

@@ -1,4 +1,4 @@
-package com.paaste.coopy.backend.domain.model;
+package com.paaste.coopy.backend.Pickups;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

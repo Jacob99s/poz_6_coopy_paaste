@@ -1,8 +1,7 @@
 package com.paaste.coopy.backend;
 
-import com.paaste.coopy.backend.GoogleMaps.GeoCoords;
 import com.paaste.coopy.backend.Pickups.PickupPlaces;
-import com.paaste.coopy.backend.domain.model.PickupPoint;
+import com.paaste.coopy.backend.Pickups.PickupPoint;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

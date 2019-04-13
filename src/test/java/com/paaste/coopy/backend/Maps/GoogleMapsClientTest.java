@@ -1,21 +1,14 @@
-package com.paaste.coopy.backend.GoogleMaps;
+package com.paaste.coopy.backend.Maps;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.paaste.coopy.backend.Exceptions.OutOfRangeException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.context.annotation.DependsOn;
-
-import java.io.IOException;
-
-import static org.junit.Assert.*;
 
 public class GoogleMapsClientTest
 {
     GeoCoords origin, destination;
     DistanceMatrix distanceMatrix;
-    GoogleMaps maps = new GoogleMapsClient();
+    Maps maps = new GoogleMapsClient();
 
     @Before
     public void setCoords()
