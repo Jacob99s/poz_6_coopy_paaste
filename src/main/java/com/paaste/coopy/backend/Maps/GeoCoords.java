@@ -1,6 +1,6 @@
-package com.paaste.coopy.backend.GoogleMaps;
+package com.paaste.coopy.backend.Maps;
 
-import com.paaste.coopy.backend.domain.model.Coordinate;
+import com.paaste.coopy.backend.Pickups.Coordinate;
 
 public class GeoCoords {
 

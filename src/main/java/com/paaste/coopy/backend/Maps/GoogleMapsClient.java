@@ -1,22 +1,22 @@
-package com.paaste.coopy.backend.GoogleMaps;
+package com.paaste.coopy.backend.Maps;
 
-import com.paaste.coopy.backend.domain.model.PickupPoint;
+import com.paaste.coopy.backend.Pickups.PickupPoint;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class GoogleMapsClient implements GoogleMaps
+public class GoogleMapsClient implements Maps
 {
 
     @Override
     public DistanceMatrix getDistanceMatrix(GeoCoords origin, GeoCoords destination)
     {
-        String uri =
-                "https://maps.googleapis.com/maps/api/distancematrix/json?&origins=" + origin.getLatitude() +
-                        "," + origin.getLongitude() + "&destinations=" + destination.getLatitude() + "," + destination.getLongitude() + "&key=AIzaSyCJkiekbMK0DsVdFsrSEts_WlgvxCfPThA";
+        String uri = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins=" + origin.getLatitude() +
+                "," + origin.getLongitude() + "&destinations=" + destination.getLatitude() +
+                "," + destination.getLongitude() + "&key=AIzaSyCJkiekbMK0DsVdFsrSEts_WlgvxCfPThA";
+
         DistanceMatrix distanceMatrix = restTemplate.getForObject(uri, DistanceMatrix.class);
         return distanceMatrix;
     }
