@@ -1,4 +1,4 @@
-package com.paaste.coopy.backend;
+package com.paaste.coopy.backend.GoogleMaps;
 
 import java.io.Serializable;
 
