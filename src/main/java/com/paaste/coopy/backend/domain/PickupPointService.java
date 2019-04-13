@@ -23,7 +23,7 @@ public class PickupPointService {
 
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        String url = "/general-deliveries?clusterThreshold=1000000" +
+        String url = "/general-deliveries?clusterThreshold=100000" +
                 "&nwLat=" + nwLat + "&nwLon=" + nwLon + "&seLat=" + seLat + "&seLon=" + seLon
                 + "&sellerId=" + sellerId;
         System.out.println(url);

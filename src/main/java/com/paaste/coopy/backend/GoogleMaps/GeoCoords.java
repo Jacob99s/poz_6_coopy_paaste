@@ -1,18 +1,21 @@
 package com.paaste.coopy.backend.GoogleMaps;
 
-import com.paaste.coopy.backend.Exceptions.OutOfRangeException;
+import com.paaste.coopy.backend.domain.model.Coordinate;
 
 public class GeoCoords {
 
-    public GeoCoords(double latitude, double longitude) throws OutOfRangeException
+    public GeoCoords(double latitude, double longitude)
     {
         setCoords(latitude, longitude);
     }
 
-    public void setCoords(double latitude, double longitude) throws OutOfRangeException
+    public GeoCoords(Coordinate coords)
     {
-        if((latitude < -180 || latitude > 180) || (longitude < -180 || longitude > 180))
-        { throw new OutOfRangeException(); }
+        setCoords(coords.latitude, coords.longitude);
+    }
+
+    public void setCoords(double latitude, double longitude)
+    {
         this.latitude = latitude;
         this.longitude = longitude;
     }

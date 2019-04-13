@@ -1,24 +1,40 @@
 package com.paaste.coopy.backend;
 
+import com.paaste.coopy.backend.GoogleMaps.GeoCoords;
+import com.paaste.coopy.backend.Pickups.PickupPlaces;
 import com.paaste.coopy.backend.domain.PickupPointService;
+import com.paaste.coopy.backend.domain.model.PickupPoint;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/pickups")
 public class PickupRestController {
 
-    private final PickupPointService pickupPointService;
+    private final PickupPlaces pickupPlaces;
 
-    public PickupRestController(PickupPointService pickupPointService) {
-        this.pickupPointService = pickupPointService;
+    public PickupRestController(PickupPlaces pickupPlaces) {
+        this.pickupPlaces = pickupPlaces;
+    }
+
+    @GetMapping("/suggested")
+    public ResponseEntity<List<PickupPoint>> suggestedPickupPointsForLocation(@RequestParam double origLat,
+                                                                     @RequestParam double origLon
+            ,@RequestParam int sellerID) {
+        return ResponseEntity.ok(pickupPlaces.getBestPickups(new GeoCoords(origLat, origLon),
+                sellerID));
     }
 
     @GetMapping
-    public ResponseEntity<Void> pickupPointsForLocation() {
-        return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
+    public ResponseEntity<List<PickupPoint>> allPickupPointsForLocation(@RequestParam double origLat, @RequestParam double origLon, @RequestParam int sellerID)
+    {
+        return ResponseEntity.ok(pickupPlaces.getAllPickups(new GeoCoords(origLat, origLon),
+                sellerID));
     }
 }
