@@ -7,6 +7,7 @@ public class PickupPoint {
     public double lat = 0;
     public double lng = 0;
     public String name = "";
+    public double dimension = 0;
 
     public PickupPoint(int id_point, String category_point, double lat_point, double lng_point, String name_point){
         this.id = id_point;

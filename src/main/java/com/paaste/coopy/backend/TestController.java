@@ -14,7 +14,7 @@ public class TestController {
 
     private final ApplicationContext context;
     private String headers;
-    Points point = new Points();
+    Points points = new Points();
     public UserData userData = new UserData();
 
     public TestController(ApplicationContext context) {
@@ -23,9 +23,9 @@ public class TestController {
 
 
     @GetMapping("/api/{id}")
-    public List<Integer> getUserData(@PathVariable(name = "id") int id) {
-        List<Integer> tmp = new ArrayList<>();
-        tmp = point.GetSuggestedPoint(userData.recently_pickup, id, 360, tmp);
+    public List<PickupPoint> getUserData(@PathVariable(name = "id") int id) {
+        List<PickupPoint> tmp = new ArrayList<>();
+        tmp = points.GetSuggestedPoint(userData.recently_pickup, id);
         return tmp;
     }
 
